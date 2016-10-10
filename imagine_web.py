@@ -22,6 +22,7 @@ except ImportError:
     pass
 
 from imagine_core import *
+import imagine_core
 
 
 # flask provides a "session" object, which allows us to store information across
@@ -146,4 +147,5 @@ def collection_detail(collectionname):
 
 # allow running from the command line
 if __name__ == '__main__':
+    imagine_core.init_db(DATABASE)
     app.run()
